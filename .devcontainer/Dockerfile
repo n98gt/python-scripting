@@ -23,18 +23,19 @@ RUN mkdir -p /home/$USERNAME/.vscode-server/extensions \
     && chown -R $USERNAME \
         /home/$USERNAME/.vscode-server \
         /home/$USERNAME/.vscode-server-insiders
-
+ARG WORKSPACE_FOLDER
 # for persisting cli history
 RUN SNIPPET="export PROMPT_COMMAND='history -a' && \
 export HISTFILE=/home/$USERNAME/commandhistory/.bash_history && \
-export HISTSIZE=  && \
-export HISTFILESIZE=  && \
-shopt -s histappend  && \
+export HISTSIZE= && \
+export HISTFILESIZE= && \
+shopt -s histappend && \
 alias ll='ls -ahlF --color' && \
 alias llt=\"ls --time-style='+%d-%m-%Y %H:%M:%S' -l\" && \
 bind '\"\e[A\": history-search-backward' && \
 bind '\"\e[B\": history-search-forward' && \
-stty -ixon" \
+stty -ixon && \
+[ -f ${WORKSPACE_FOLDER:?Shoul be set and non-empty}/.devcontainer/.bashrc_kustom ] && . ${WORKSPACE_FOLDER:?Shoul be set and non-empty}/.devcontainer/.bashrc_kustom " \
     && mkdir /home/$USERNAME/commandhistory \
     && touch /home/$USERNAME/commandhistory/.bash_history \
     && echo $SNIPPET >> "/home/$USERNAME/.bashrc"

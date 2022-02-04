@@ -1,0 +1,33 @@
+#commit message with spaces (any number of words) and  in message's body
+gcma() {
+    local message_title="$@"
+
+    local staging_area_changes=$(git status -s | grep '^\w.')
+    local message_body=$'\n\n'$staging_area_changes
+
+    if [[ $message_title == "" ]]; then
+        git commit --allow-empty-message -m "";
+    else
+        git commit -m "$message_title""$message_body";
+    fi
+}
+
+gl() {
+    if [[ $1 == "" ]]; then
+        git log --pretty="%C(Yellow)%h  %C(reset)%ad (%C(Green)%cr%C(reset))%x09 %C(Cyan)%an: %C(reset)%s" -10
+    else
+        git log --pretty="%C(Yellow)%h  %C(reset)%ad (%C(Green)%cr%C(reset))%x09 %C(Cyan)%an: %C(reset)%s" -$1
+    fi
+}
+
+alias gs='git status'
+alias gsh='git status -sb'
+alias gco='git checkout '
+alias gt='git log --graph --abbrev-commit --decorate --oneline --all'
+alias gcm='git commit -m'
+alias gc='git commit'
+alias gb='git branch '
+alias gcem='git commit --allow-empty-message -m \"\"'
+alias gfs='git fetch && gs'
+alias gpo='git push --set-upstream origin \`git rev-parse --abbrev-ref HEAD\`'
+alias ga='git add '

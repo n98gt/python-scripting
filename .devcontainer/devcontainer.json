@@ -9,6 +9,7 @@
 			"PYTHON_VERSION": "3.9",
 			"UID": "1001",
 			"GID": "1001",
+			"WORKSPACE_FOLDER": "${containerWorkspaceFolder}",
 		}
 	},
 

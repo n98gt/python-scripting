@@ -1,0 +1,24 @@
+{
+    // "workbench.colorCustomizations": {
+	// 		"titleBar.activeBackground": "#9800b67a",
+
+	// },
+    "files.associations": {
+    },
+    "restoreTerminals.terminals": [
+      {
+        "splitTerminals": [
+          {
+            "name": "python",
+          },
+        ]
+      },
+      {
+        "splitTerminals": [
+          {
+            "name": "bash",
+          },
+        ]
+      },
+    ]
+}

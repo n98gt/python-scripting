@@ -20,6 +20,8 @@ gl() {
     fi
 }
 
+export PS1="${PS1::-2}n$ "
+
 alias gs='git status'
 alias gsh='git status -sb'
 alias gco='git checkout '

@@ -1,24 +1,39 @@
 {
-    // "workbench.colorCustomizations": {
-	// 		"titleBar.activeBackground": "#9800b67a",
-
-	// },
-    "files.associations": {
+  // "workbench.colorCustomizations": {
+  // 		"titleBar.activeBackground": "#9800b67a",
+  // },
+  "files.associations": {},
+  "restoreTerminals.terminals": [
+    {
+      "splitTerminals": [
+        {
+          "name": "python",
+        },
+      ]
     },
-    "restoreTerminals.terminals": [
-      {
-        "splitTerminals": [
-          {
-            "name": "python",
-          },
-        ]
-      },
-      {
-        "splitTerminals": [
-          {
-            "name": "bash",
-          },
-        ]
-      },
-    ]
+    {
+      "splitTerminals": [
+        {
+          "name": "bash",
+        },
+      ]
+    },
+  ],
+  "python.linting.flake8Enabled": true,
+  "python.linting.enabled": true,
+  "python.linting.pydocstyleEnabled": true,
+  "[python]": {
+    "editor.formatOnSave": true,
+    "editor.formatOnType": true,
+    "editor.formatOnPaste": false,
+    "editor.autoIndent": "full",
+    "editor.formatOnSaveMode": "file",
+    "editor.insertSpaces": true,
+    "editor.tabSize": 4,
+    "editor.tabCompletion": "on",
+    // "editor.defaultFormatter": null
+  },
+  "editor.formatOnSave": true,
+  "python.formatting.provider": "black",
+  // "python.formatting.provider": "autopep8",
 }

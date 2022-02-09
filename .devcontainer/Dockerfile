@@ -6,6 +6,7 @@ LABEL maintainer="n98gt56ti@gmail.com"
 
 RUN apt-get update && export DEBIAN_FRONTEND=noninteractive \
     && apt-get -y install --no-install-recommends git openssh-client
+RUN pip install --no-cache-dir  flake8==4.0.1 pydocstyle==6.1.1 flake8-builtins==1.5.3 flake8-bugbear==22.1.11 pep8-naming==0.12.1 flake8-commas==2.1.0 flake8-variables-names==0.0.4 flake8-import-order==0.18.1 black==22.1.0
 
 ARG UID=1000
 ARG GID=1000

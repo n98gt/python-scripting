@@ -33,8 +33,11 @@
 	"extensions": [
 		"ms-python.python",
 		"ms-python.vscode-pylance",
-		"ethansk.restore-terminals",
-		"v4run.transpose"
+		"ethansk.restore-terminals", // save/restore terminal tabs and run commands
+		"v4run.transpose", // switch character with Ctrl+T
+		"kevinrose.vsc-python-indent", // auto-indent
+		"formulahendry.code-runner", // run code with Ctrl+Alt+N
+		"njpwerner.autodocstring", // functions descriptions
 	],
 
 	// Use 'forwardPorts' to make a list of ports inside the container available locally.

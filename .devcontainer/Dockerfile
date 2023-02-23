@@ -30,6 +30,7 @@ RUN SNIPPET="export PROMPT_COMMAND='history -a' && \
 export HISTFILE=/home/$USERNAME/commandhistory/.bash_history && \
 export HISTSIZE= && \
 export HISTFILESIZE= && \
+export GIT_EDITOR='code --reuse-window --wait' && \
 shopt -s histappend && \
 alias ll='ls -ahlF --color' && \
 alias llt=\"ls --time-style='+%d-%m-%Y %H:%M:%S' -l\" && \

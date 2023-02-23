@@ -59,6 +59,8 @@
 	// persist extensions, bash history, etc…
 	"mounts": [
 		"source=/mnt/e/Dropbox/Symlinked_files/.ssh/id_rsa_github,target=/home/vscode/.ssh_mounted/id_rsa,type=bind,ro",
+		// persist command history
+		// "source=vscode-${localWorkspaceFolderBasename}-bashhistory,target=/commandhistory,type=volume",		// persist extensions
 		"source=vscode-python-scripting-bashhistory,target=/home/vscode/commandhistory,type=volume",
 		"source=vscode-python-scripting,target=/home/vscode/.vscode-server/extensions,type=volume",
 		// And/or for VS Code Insiders

@@ -14,8 +14,8 @@ ENV UID=${UID}
 ENV GID=${GID}
 ARG USERNAME=vscode
 ARG GROUPNAME=${USERNAME}
-RUN groupadd --gid $UID $GROUPNAME \
-    && useradd --uid $GID --gid $USERNAME --shell /bin/bash --create-home $GROUPNAME
+RUN groupadd --gid $GID $GROUPNAME \
+    && useradd --uid $UID --gid $GID --create-home --shell /bin/bash $USERNAME
 USER $UID
 
 # for persisting VScode extensions
